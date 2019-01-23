@@ -1,5 +1,6 @@
 variables:
   buildConfiguration: 'Debug'
+  atata.config.alias: 'ci'
 
 jobs:
 - job: 'Build_Tests'

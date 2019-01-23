@@ -42,7 +42,7 @@
     <ProjectReference Include="..\AtataSampleApp.UITests.Components\AtataSampleApp.UITests.Components.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Atata.json">
+    <None Include="Atata.*json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

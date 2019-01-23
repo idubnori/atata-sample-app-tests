@@ -1,4 +1,5 @@
-﻿using Atata;
+﻿using System;
+using Atata;
 using NUnit.Framework;
 
 namespace AtataSampleApp.UITests
@@ -14,11 +15,12 @@ namespace AtataSampleApp.UITests
         [SetUp]
         public void SetUp()
         {
+            var configAlias = Environment.GetEnvironmentVariable("ATATA_CONFIG_ALIAS");
+
             AtataContext.Configure().
-                ApplyJsonConfig<AtataConfig>().
+                ApplyJsonConfig<AtataConfig>("Atata", configAlias).
                 UseChrome().
                     WithLocalDriverPath().
-                    WithArguments("start-maximized", "disable-infobars", "disable-extensions").
                 // Base URL can be set here, but in this sample it is defined in Atata.json config file.
                 //UseBaseUrl("https://atata-framework.github.io/atata-sample-app/#!/").
                 UseCulture("en-US").
