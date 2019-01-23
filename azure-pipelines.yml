@@ -4,8 +4,14 @@ variables:
 
 jobs:
 - job: 'Build_Tests'
+  strategy:
+    matrix: 
+      windows:
+        pool_name: Hosted VS2017
+      linux:
+        pool_name: Hosted Ubuntu 1604
   pool:
-    name: Hosted VS2017
+    name: $(pool_name)
   steps:
   - task: DotNetCoreInstaller@0
     displayName: Install .NET Core sdk 2.2
