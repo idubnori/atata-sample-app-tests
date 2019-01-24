@@ -4,7 +4,10 @@
   "driver": {
     "type": "chrome",
     "options": {
-      "arguments": [ "headless", "start-maximized", "disable-infobars", "disable-extensions" ]
+      "arguments": [ "--headless", "no-sandbox" ]
+    },
+    "service": {
+      "driverPath": "./"
     }
   },
   //"useNUnitTestName": true,

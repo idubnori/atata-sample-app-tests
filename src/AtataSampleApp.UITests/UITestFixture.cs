@@ -20,8 +20,6 @@ namespace AtataSampleApp.UITests
 
             AtataContext.Configure().
                 ApplyJsonConfig<AtataConfig>("Atata", configAlias).
-                UseChrome().
-                    WithDriverPath(Directory.GetCurrentDirectory()).
                 // Base URL can be set here, but in this sample it is defined in Atata.json config file.
                 //UseBaseUrl("https://atata-framework.github.io/atata-sample-app/#!/").
                 UseCulture("en-US").
